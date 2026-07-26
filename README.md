@@ -28,7 +28,7 @@ To validate and install a packed artifact from source:
 npm ci
 npm run validate
 npm pack
-openclaw plugins install npm-pack:./airouter-dev-openclaw-ai-router-0.1.1.tgz --force
+openclaw plugins install npm-pack:./airouter-dev-openclaw-ai-router-0.1.2.tgz --force
 openclaw plugins inspect ai-router --runtime --json
 ```
 
@@ -40,10 +40,12 @@ openclaw plugins install clawhub:@airouter-dev/openclaw-ai-router
 
 ## Configure
 
-Use OpenClaw's provider setup flow and choose **AI Router API key**, or provide the credential to the OpenClaw process:
+Use OpenClaw's provider setup flow and choose **AI Router API key**, or read the credential without echoing it or placing it in shell history:
 
 ```bash
-export AI_ROUTER_API_KEY="your-own-key"
+read -rsp "AI_ROUTER_API_KEY: " AI_ROUTER_API_KEY
+printf '\n'
+export AI_ROUTER_API_KEY
 ```
 
 OpenClaw requests the model catalog only after it resolves a credential. Select one of the returned `ai-router/<model-id>` entries.

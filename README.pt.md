@@ -20,7 +20,7 @@ Para validar e instalar um pacote gerado a partir do código-fonte:
 npm ci
 npm run validate
 npm pack
-openclaw plugins install npm-pack:./airouter-dev-openclaw-ai-router-0.1.1.tgz --force
+openclaw plugins install npm-pack:./airouter-dev-openclaw-ai-router-0.1.2.tgz --force
 openclaw plugins inspect ai-router --runtime --json
 ```
 
@@ -32,10 +32,12 @@ openclaw plugins install clawhub:@airouter-dev/openclaw-ai-router
 
 ## Configuração
 
-No assistente do OpenClaw, selecione **AI Router API key** ou forneça a variável de ambiente ao processo do OpenClaw:
+No assistente do OpenClaw, selecione **AI Router API key** ou leia a chave sem exibi-la nem gravá-la no histórico do shell:
 
 ```bash
-export AI_ROUTER_API_KEY="sua-chave"
+read -rsp "AI_ROUTER_API_KEY: " AI_ROUTER_API_KEY
+printf '\n'
+export AI_ROUTER_API_KEY
 ```
 
 O catálogo só é consultado depois que uma credencial é resolvida. Se a descoberta estiver indisponível, adicione o ID em `models.providers.ai-router.models`. Modelos desconhecidos recebem apenas limites locais conservadores; o plugin não deduz preço, janela de contexto ou recursos avançados.

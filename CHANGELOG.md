@@ -2,6 +2,11 @@
 
 All notable changes will be documented in this file.
 
+## 0.1.2 - 2026-07-26
+
+- Replace literal API-key placeholders with interactive, no-echo shell input.
+- Keep credentials out of shell history and avoid false-positive secret scans.
+
 ## 0.1.1 - 2026-07-26
 
 - Include the compiled `dist/` entrypoint in source-backed ClawHub artifacts.

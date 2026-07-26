@@ -1,6 +1,6 @@
 {
   "name": "@airouter-dev/openclaw-ai-router",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Independent AI Router provider plugin for OpenClaw",
   "type": "module",
   "license": "MIT",

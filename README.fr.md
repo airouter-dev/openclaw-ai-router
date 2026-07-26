@@ -20,7 +20,7 @@ Pour vérifier et installer une archive générée depuis les sources :
 npm ci
 npm run validate
 npm pack
-openclaw plugins install npm-pack:./airouter-dev-openclaw-ai-router-0.1.1.tgz --force
+openclaw plugins install npm-pack:./airouter-dev-openclaw-ai-router-0.1.2.tgz --force
 openclaw plugins inspect ai-router --runtime --json
 ```
 
@@ -32,10 +32,12 @@ openclaw plugins install clawhub:@airouter-dev/openclaw-ai-router
 
 ## Configuration
 
-Dans l'assistant OpenClaw, choisissez **AI Router API key**, ou fournissez la variable d'environnement au processus OpenClaw :
+Dans l'assistant OpenClaw, choisissez **AI Router API key**, ou lisez la clé sans l'afficher ni l'enregistrer dans l'historique du shell :
 
 ```bash
-export AI_ROUTER_API_KEY="votre-cle-api"
+read -rsp "AI_ROUTER_API_KEY: " AI_ROUTER_API_KEY
+printf '\n'
+export AI_ROUTER_API_KEY
 ```
 
 Le catalogue n'est demandé qu'après la résolution d'une clé. Si la découverte est indisponible, ajoutez manuellement l'identifiant sous `models.providers.ai-router.models`. Les modèles inconnus utilisent uniquement des limites locales prudentes ; l'extension ne déduit ni prix, ni taille de contexte, ni capacité avancée.

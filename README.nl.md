@@ -20,7 +20,7 @@ Zo controleert en installeert u een pakket vanuit de broncode:
 npm ci
 npm run validate
 npm pack
-openclaw plugins install npm-pack:./airouter-dev-openclaw-ai-router-0.1.1.tgz --force
+openclaw plugins install npm-pack:./airouter-dev-openclaw-ai-router-0.1.2.tgz --force
 openclaw plugins inspect ai-router --runtime --json
 ```
 
@@ -32,10 +32,12 @@ openclaw plugins install clawhub:@airouter-dev/openclaw-ai-router
 
 ## Configuratie
 
-Kies **AI Router API key** in de installatiewizard van OpenClaw, of geef de omgevingsvariabele door aan het OpenClaw-proces:
+Kies **AI Router API key** in de installatiewizard van OpenClaw, of lees de sleutel zonder schermuitvoer of opname in de shellgeschiedenis:
 
 ```bash
-export AI_ROUTER_API_KEY="uw-eigen-sleutel"
+read -rsp "AI_ROUTER_API_KEY: " AI_ROUTER_API_KEY
+printf '\n'
+export AI_ROUTER_API_KEY
 ```
 
 De modelcatalogus wordt pas opgehaald nadat een sleutel is gevonden. Als detectie niet beschikbaar is, voegt u het model-ID handmatig toe onder `models.providers.ai-router.models`. Onbekende modellen krijgen alleen voorzichtige lokale limieten; de plugin leidt geen prijzen, contextlimieten of geavanceerde mogelijkheden af.
