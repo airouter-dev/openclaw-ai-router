@@ -20,6 +20,11 @@ expect(
   packageJson.openclaw?.extensions?.[0] === "./dist/index.js",
   "runtime entry must use built JavaScript",
 );
+expect(
+  packageJson.openclaw?.install?.clawhubSpec ===
+    "@airouter-dev/openclaw-ai-router",
+  "ClawHub install spec must use the scoped package name",
+);
 expect(manifest.id === "ai-router", "manifest provider id must be ai-router");
 expect(
   manifest.providers?.includes("ai-router"),

@@ -14,20 +14,20 @@ Dieses Paket ist kein offizielles OpenClaw-Plugin und stellt keine Partnerschaft
 
 ## Installation
 
-Vor der ersten ClawHub-Veröffentlichung kann das Paket aus dem Quellcode geprüft und installiert werden:
+So kann ein Paket aus dem Quellcode geprüft und installiert werden:
 
 ```bash
 npm ci
 npm run validate
 npm pack
-openclaw plugins install npm-pack:./airouter-dev-openclaw-ai-router-0.1.0.tgz --force
+openclaw plugins install npm-pack:./airouter-dev-openclaw-ai-router-0.1.1.tgz --force
 openclaw plugins inspect ai-router --runtime --json
 ```
 
-Nach der verifizierten ClawHub-Veröffentlichung:
+Installation der verifizierten ClawHub-Veröffentlichung:
 
 ```bash
-openclaw plugins install clawhub:airouter-dev/openclaw-ai-router
+openclaw plugins install clawhub:@airouter-dev/openclaw-ai-router
 ```
 
 ## Konfiguration

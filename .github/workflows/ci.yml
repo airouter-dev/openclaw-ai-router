@@ -29,6 +29,9 @@ jobs:
       - name: Validate package
         run: npm run validate
 
+      - name: Verify committed build output
+        run: git diff --exit-code -- dist
+
       - name: Audit runtime dependencies
         run: npm audit --omit=dev
 

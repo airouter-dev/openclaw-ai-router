@@ -29,7 +29,7 @@
 7. Run `clawhub package publish airouter-dev/openclaw-ai-router --dry-run`.
 8. Review the dry-run artifact and ownership result, then publish the same
    commit.
-9. Install using `clawhub:airouter-dev/openclaw-ai-router` and inspect the
+9. Install using `clawhub:@airouter-dev/openclaw-ai-router` and inspect the
    loaded runtime.
 10. Verify the public ClawHub page renders the README, source repository, and
     intended product link before recording a registry backlink.

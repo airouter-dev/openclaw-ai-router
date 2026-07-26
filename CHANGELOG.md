@@ -2,6 +2,12 @@
 
 All notable changes will be documented in this file.
 
+## 0.1.1 - 2026-07-26
+
+- Include the compiled `dist/` entrypoint in source-backed ClawHub artifacts.
+- Correct the scoped ClawHub install spec in all setup guides.
+- Verify in CI that committed build output matches the TypeScript source.
+
 ## 0.1.0 - 2026-07-26
 
 - Register the independent `ai-router` provider for OpenClaw.

@@ -22,20 +22,20 @@ This package is independently maintained. It is not an official OpenClaw plugin 
 
 ## Install
 
-Until the first ClawHub release, validate and install the packed artifact from source:
+To validate and install a packed artifact from source:
 
 ```bash
 npm ci
 npm run validate
 npm pack
-openclaw plugins install npm-pack:./airouter-dev-openclaw-ai-router-0.1.0.tgz --force
+openclaw plugins install npm-pack:./airouter-dev-openclaw-ai-router-0.1.1.tgz --force
 openclaw plugins inspect ai-router --runtime --json
 ```
 
-After a verified ClawHub release is available:
+Install the verified ClawHub release:
 
 ```bash
-openclaw plugins install clawhub:airouter-dev/openclaw-ai-router
+openclaw plugins install clawhub:@airouter-dev/openclaw-ai-router
 ```
 
 ## Configure
