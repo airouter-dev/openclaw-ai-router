@@ -1,0 +1,44 @@
+{
+  "id": "ai-router",
+  "name": "AI Router",
+  "description": "OpenAI-compatible model routing with authenticated catalog discovery",
+  "activation": {
+    "onStartup": false
+  },
+  "providers": ["ai-router"],
+  "modelCatalog": {
+    "discovery": {
+      "ai-router": "runtime"
+    }
+  },
+  "setup": {
+    "providers": [
+      {
+        "id": "ai-router",
+        "envVars": ["AI_ROUTER_API_KEY"]
+      }
+    ]
+  },
+  "providerAuthChoices": [
+    {
+      "provider": "ai-router",
+      "method": "api-key",
+      "choiceId": "ai-router-api-key",
+      "appGuidedSecret": true,
+      "choiceLabel": "AI Router API key",
+      "choiceHint": "OpenAI-compatible routing with live model discovery",
+      "groupId": "ai-router",
+      "groupLabel": "AI Router",
+      "groupHint": "Use models available to your AI Router account",
+      "optionKey": "aiRouterApiKey",
+      "cliFlag": "--ai-router-api-key",
+      "cliOption": "--ai-router-api-key <key>",
+      "cliDescription": "AI Router API key"
+    }
+  ],
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {}
+  }
+}

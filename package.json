@@ -1,0 +1,76 @@
+{
+  "name": "@airouter-dev/openclaw-ai-router",
+  "version": "0.1.0",
+  "description": "Independent AI Router provider plugin for OpenClaw",
+  "type": "module",
+  "license": "MIT",
+  "author": "AI Router",
+  "homepage": "https://github.com/airouter-dev/openclaw-ai-router#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/airouter-dev/openclaw-ai-router.git"
+  },
+  "bugs": {
+    "url": "https://github.com/airouter-dev/openclaw-ai-router/issues"
+  },
+  "keywords": [
+    "openclaw",
+    "openclaw-plugin",
+    "ai-router",
+    "openai-compatible",
+    "model-provider"
+  ],
+  "files": [
+    "dist",
+    "openclaw.plugin.json",
+    "README.md",
+    "README.de.md",
+    "README.fr.md",
+    "README.pt.md",
+    "README.nl.md",
+    "LICENSE"
+  ],
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "engines": {
+    "node": ">=22.22.3 <23 || >=24.15.0 <25 || >=25.9.0"
+  },
+  "peerDependencies": {
+    "openclaw": ">=2026.7.1-2 <2027"
+  },
+  "devDependencies": {
+    "@eslint/js": "10.0.1",
+    "@types/node": "24.13.3",
+    "eslint": "10.8.0",
+    "openclaw": "2026.7.1-2",
+    "prettier": "3.9.6",
+    "typescript": "6.0.3",
+    "typescript-eslint": "8.65.0",
+    "vitest": "4.1.10"
+  },
+  "scripts": {
+    "clean": "node -e \"require('node:fs').rmSync('dist',{recursive:true,force:true})\"",
+    "build": "tsc -p tsconfig.build.json",
+    "check": "tsc -p tsconfig.json --noEmit",
+    "lint": "eslint eslint.config.js vitest.config.ts src scripts",
+    "format:check": "prettier --check .",
+    "test": "vitest run",
+    "validate:manifest": "node scripts/validate-manifest.mjs",
+    "validate": "npm run check && npm run lint && npm run format:check && npm run test && npm run validate:manifest && npm run build",
+    "prepack": "npm run clean && npm run validate"
+  },
+  "openclaw": {
+    "extensions": [
+      "./dist/index.js"
+    ],
+    "compat": {
+      "pluginApi": ">=2026.7.1-2",
+      "minGatewayVersion": "2026.7.1-2"
+    },
+    "build": {
+      "openclawVersion": "2026.7.1-2",
+      "pluginSdkVersion": "2026.7.1-2"
+    }
+  }
+}
