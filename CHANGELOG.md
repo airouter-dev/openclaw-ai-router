@@ -2,7 +2,7 @@
 
 All notable changes will be documented in this file.
 
-## 0.1.0 - Unreleased
+## 0.1.0 - 2026-07-26
 
 - Register the independent `ai-router` provider for OpenClaw.
 - Add API-key onboarding through `AI_ROUTER_API_KEY`.
