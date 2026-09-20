@@ -41,13 +41,13 @@
   },
   "devDependencies": {
     "@eslint/js": "10.0.1",
-    "@types/node": "24.13.3",
-    "eslint": "10.8.0",
-    "openclaw": "2026.7.1-2",
-    "prettier": "3.9.6",
+    "@types/node": "24.13.5",
+    "eslint": "10.10.0",
+    "openclaw": "2026.9.4",
+    "prettier": "3.9.7",
     "typescript": "6.0.3",
-    "typescript-eslint": "8.65.0",
-    "vitest": "4.1.10"
+    "typescript-eslint": "8.70.0",
+    "vitest": "5.0.1"
   },
   "scripts": {
     "clean": "node -e \"require('node:fs').rmSync('dist',{recursive:true,force:true})\"",
